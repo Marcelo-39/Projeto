@@ -45,36 +45,5 @@
   </form>
   <h2>Resultado do Agendamento:</h2>
   <div id="resultado"></div>
-  <script>
-    // Get the form element
-var form = document.querySelector('form');
-
-// Add a submit event listener to the form
-form.addEventListener('submit', function(event) {
-  event.preventDefault();  // Prevent form submission
-
-  // Get the values from the form inputs
-  var data = document.getElementById('data').value;
-  var seletor1 = document.getElementById('seletor1').value;
-  var seletor2 = document.getElementById('seletor2').value;
-  var checkBox1 = document.getElementById('checkBox1').checked;
-  var seletor3 = document.getElementById('seletor3').value;
-  var checkBox2 = document.getElementById('checkBox2').checked;
-  var observacao = document.getElementById('observacao').value;
-
-  // Generate the result message
-  var resultado = `Data: ${data}<br>
-                    Seletor 1: ${seletor1}<br>
-                    Seletor 2: ${seletor2}<br>
-                    Almoço: ${checkBox1 ? 'Sim' : 'Não'}<br>
-                    Seletor 3: ${seletor3}<br>
-                    Receptivo: ${checkBox2 ? 'Sim' : 'Não'}<br>
-                    Observação: ${observacao}`;
-
-  // Display the result message
-  document.getElementById('resultado').innerHTML = resultado;
-});
-
-  </script>
 </body>
 </html>
